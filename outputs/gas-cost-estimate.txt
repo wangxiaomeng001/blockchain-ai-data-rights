@@ -1,0 +1,32 @@
+=================================================================
+  Solidity 合约 Gas 费用估算（Sepolia 测试网）
+  Gas Price: 20 Gwei  |  ETH/USD: $3000（参考价格）
+=================================================================
+
+操作：DataRegistry.deploy()
+  描述  : 合约部署上链（一次性）
+  Gas   : 1,555,243
+  费用  : 0.031105 ETH  ≈  $93.3100
+
+操作：DataRegistry.register()
+  描述  : 数据集链上确权登记（含事件发射）
+  Gas   : 275,845
+  费用  : 0.005517 ETH  ≈  $16.5500
+
+操作：DataRegistry.verify()
+  描述  : 数据完整性校验（含事件发射）
+  Gas   : 46,109
+  费用  : 0.000922 ETH  ≈  $2.7700
+
+操作：DataRegistry.ownerOf()
+  描述  : 所有权查询（view 调用，off-chain 不消耗 gas）
+  Gas   : 0
+  费用  : 0.000000 ETH  ≈  $0.0000
+
+说明：
+  - 以上数值基于 Remix IDE 编译后的 Gas Estimation 功能
+  - 实际 Gas 消耗因 EVM 执行路径而略有差异（±10%）
+  - 测试网 Gas 无需真实 ETH，Sepolia faucet 可免费领取
+  - 主网部署时费用取决于网络拥堵程度
+
+  合约源码见 contracts/ 目录（DataMarket.sol / DataToken.sol）

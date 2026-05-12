@@ -1,0 +1,16 @@
+# 基于区块链的分布式 AI 数据确权系统 · 依赖清单
+# 安装：pip install -r requirements.txt
+
+# 科学计算与绘图
+numpy>=1.24.0
+matplotlib>=3.7.0
+
+# Web 前端原型
+streamlit>=1.32.0
+
+# 说明：
+# - 无需 web3.py / ethers.py（不连接真实区块链，Remix 中编译 .sol）
+# - 无需 solcx / brownie / hardhat
+# - 无需 cryptography / ecdsa（签名以 hashlib 模拟）
+# - 无需任何网络连接或 API key
+# - 标准库已足够：hashlib, json, time, random, dataclasses
